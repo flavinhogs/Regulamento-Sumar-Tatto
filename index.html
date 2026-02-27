@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Estúdio - Regulamento Oficial</title>
+    <!-- Tailwind CSS para estilização rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonte Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #050505;
+            font-family: 'Inter', sans-serif;
+            color: #f0f0f0;
+        }
+
+        /* Animação de Drift para os ícones de fundo */
+        @keyframes drift {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        .stencil {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+            animation: drift 20s infinite linear;
+        }
+
+        /* Estilização da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+
+        /* Container principal seguindo o formato do original (420px) */
+        .main-box {
+            width: 100%;
+            max-width: 420px;
+            height: 100dvh;
+            background-color: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 10;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 420px) {
+            .main-box {
+                border-radius: 0;
+            }
+        }
+
+        .scroll-area {
+            flex: 1;
+            overflow-y: auto;
+            min-height: 0;
+            width: 100%;
+            padding-right: 5px;
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        h4 {
+            color: #fff;
+            margin: 15px 0 5px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 5px 0;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        /* Destaque para o 9.5 conforme solicitado */
+        .section-9-5 {
+            font-weight: 800;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen overflow-hidden bg-[#050505]">
+    <!-- Container para os ícones flutuantes de fundo -->
+    <div id="stencils-bg" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+    <div class="main-box border border-white/5">
+        <!-- Cabeçalho -->
+        <div class="flex items-center gap-3 mb-5 pb-4 border-b border-white/10 flex-shrink-0">
+            <div class="bg-[#ff003c]/10 p-2 rounded-lg">
+                <i data-lucide="file-text" class="text-[#ff003c] w-6 h-6"></i>
+            </div>
+            <h2 class="m-0 text-[#ff003c] text-[15px] font-black tracking-widest uppercase">
+                REGULAMENTO OFICIAL
+            </h2>
+        </div>
+
+        <!-- Conteúdo com Scroll -->
+        <div class="scroll-area pr-2">
+            <p class="mb-4 font-bold text-white text-[14px]">REGULAMENTO OFICIAL – CAMPANHA "FLASH TATTOO SUMAR ESTÚDIO"</p>
+            <p class="mb-4">Este documento estabelece as regras e condições para participação na campanha promocional realizada pelo SUMAR ESTÚDIO, doravante denominado "ESTÚDIO". Ao participar da ação digital, o usuário concorda integralmente com os termos abaixo.</p>
+            
+            <h4>1. DO PERÍODO E VIGÊNCIA</h4>
+            <ul>
+                <li>1.1. A campanha terá início em 10/02/2026 e encerramento previsto para 10/03/2026.</li>
+                <li>1.2. A ação poderá ser encerrada antecipadamente caso o limite total de 20 (vinte) cupons premiados seja atingido antes da data final.</li>
+            </ul>
+
+            <h4>2. DA MECÂNICA DA PARTICIPAÇÃO</h4>
+            <ul>
+                <li>2.1. A campanha ocorre exclusivamente via plataforma digital do Estúdio, sendo o acesso estritamente limitado à leitura do QR Code oficial presencialmente.</li>
+                <li>2.2. A distribuição dos prêmios segue a ordem de chegada e conclusão do cadastro no sistema (ordem cronológica de validação).</li>
+                <li>2.3. O sistema disponibiliza um total de 20 (vinte) vagas, divididas da seguinte forma:<br>As 10 (dez) primeiras validações confirmadas ganham: 100% de desconto (Tatuagem Grátis).<br>Da 11ª à 20ª validação confirmada ganham: 50% de desconto.</li>
+                <li>2.4. O sistema possui um cronômetro de segurança de 10 minutos. Caso o participante não conclua o processo dentro deste tempo, a vaga é liberada para outro usuário.</li>
+                <li>2.5. O sistema só permite 1 participação por pessoa e irá bloquear qualquer tentativa de nova participação.</li>
+                <li>2.6. O sistema esta projetado para cancelar a participação do candidato em caso de atualização de pagina, fechamento de aba e vencimento do tempo de produção. Cada participante terá uma chance única e exclusiva sem direito a novas tentativas.</li>
+                <li>2.7. O sistema opera com uma trava de segurança temporal. Após um lead gerado, o acesso pode ser suspenso temporariamente para novas entradas, sendo reestabelecido automaticamente para dar chance a outros grupos.</li>
+                <li>2.8. O sistema funciona exclusivamente de quinta a domingo, das 19h às 03h. Fora deste período, a plataforma permanecerá inativa.</li>
+            </ul>
+
+            <h4>3. DOS PRÊMIOS E VALORES</h4>
+            <ul>
+                <li>3.1. Tatuagem Grátis (1º ao 10º lugar):<br>Isenção total do valor do procedimento da tatuagem.</li>
+                <li>3.2. Desconto de 50% (11º ao 20º lugar):<br>O desconto é aplicado sobre o valor de tabela da arte escolhida.<br>Teto do Desconto: O desconto máximo concedido é de R$ 100,00 (cem reais).<br>Valor Mínimo: O valor mínimo de qualquer procedimento (custo de material e biossegurança) é de R$ 110,00. Portanto, o valor a ser pago pelo cliente variará entre R$ 55,00 e R$ 100,00, dependendo da arte.</li>
+                <li>3.3. Regra de Valor Máximo (Aplicável a ambos os prêmios):<br>A promoção cobre tatuagens cujo valor final (soma de tamanho + dificuldade + local) seja de até R$ 200,00.<br>Caso a arte escolhida, somada ao local de aplicação, ultrapasse o valor de avaliação de R$ 200,00, o Estúdio reserva-se o direito de cobrar a diferença excedente do cliente.</li>
+                <li>3.4. DOS CUSTOS ADICIONAIS E CUIDADOS:<br>Independentemente do prêmio recebido, todas as despesas anteriores e posteriores à vinda do participante ao Estúdio, incluindo, mas não se limitando a: deslocamento (transporte), alimentação, aquisição de pomadas cicatrizantes, medicamentos ou quaisquer outros itens necessários para a assepsia e cuidados com a tatuagem, são de inteira e exclusiva responsabilidade do participante. O SUMAR ESTÚDIO não se responsabiliza pelo fornecimento desses itens ou pelo ressarcimento de valores gastos fora do procedimento artístico realizado em sessão.</li>
+            </ul>
+
+            <h4>4. DAS ARTES E PROCEDIMENTO</h4>
+            <ul>
+                <li>4.1. A promoção é válida exclusivamente para as artes (Flashs) disponíveis no catálogo da campanha.</li>
+                <li>4.2. Alterações: Não serão permitidas alterações no desenho (mudança de traço, elementos, etc). As únicas adaptações permitidas referem-se ao tamanho e enquadramento anatômico, desde que respeitem o teto de valor (Item 3.3).</li>
+                <li>4.3. Restrições:<br>- A promoção é válida apenas para pele limpa (tatuagem nova).<br>- Não serão realizados procedimentos de Cover-up (cobertura) ou reforma de tatuagens antigas.<br>- O cliente deve consultar o estúdio sobre a viabilidade da região do corpo desejada.</li>
+                <li>4.4. O procedimento deve ser realizado obrigatoriamente em uma única sessão. Caso o procedimento não seja concluído por motivos relacionados ao cliente (ex: baixa resistência à dor, mal-estar), o agendamento de uma nova data para término implicará na cobrança de taxa extra para cobrir custos de material (biossegurança).</li>
+            </ul>
+
+            <h4>5. DO AGENDAMENTO E VALIDAÇÃO</h4>
+            <ul>
+                <li>5.1. Após a confirmação na tela, o ganhador tem o prazo de 24 horas para entrar em contato via WhatsApp e confirmar a validação do cupom.</li>
+                <li>5.2. Prazos:<br>O agendamento da data deve ser feito em até 24 horas após o contato inicial.<br>A realização da tatuagem deve ocorrer dentro de 1 mês (30 dias) a contar da data de confirmação.</li>
+                <li>5.3. Transferência de Titularidade: O ganhador deve informar, no momento do primeiro contato via WhatsApp, quem será a pessoa tatuada (nome completo e dados). Caso o ganhador não informe os dados ou decida alterar a pessoa beneficiada após a confirmação, o prêmio será cancelado e a vaga disponibilizada novamente na plataforma.</li>
+            </ul>
+
+            <h4>6. CANCELAMENTO E "NO-SHOW"</h4>
+            <ul>
+                <li>6.1. O não comparecimento na data e hora agendadas, sem aviso prévio ou justificativa aceita pelo estúdio, resultará no cancelamento automático do prêmio.</li>
+                <li>6.2. En caso de cancelamento por não comparecimento, a vaga será reaberta no sistema para um novo participante, mantendo a regra de distribuição dos prêmios (10 grátis / 10 descontos).</li>
+            </ul>
+
+            <h4>7. DO DIREITO DE USO DE IMAGEM</h4>
+            <ul>
+                <li>7.1. Ao participar desta campanha e realizar o procedimento, o(a) participante autoriza, de forma gratuita, irrevogável, irretratável e universal, o uso de sua imagem e voz, bem como das imagens da tatuagem realizada (antes, durante e depois do procedimento).</li>
+                <li>7.2. O Sumar Estúdio fica autorizado a utilizar o material captado para fins de divulgação, publicidade, composição de portfólio e marketing em quaisquer meios de comunicação, incluindo, mas não se limitando a: redes sociais (Instagram, TikTok, Facebook, etc.), site oficial, materiais impressos e exposições.</li>
+                <li>7.3. A presente autorização é concedida a título gratuito, não gerando ao participante qualquer direito a remuneração, indenização, royalties ou compensação financeira de qualquer natureza pelo uso de sua imagem associada ao trabalho artístico do Estúdio.</li>
+            </ul>
+
+            <h4>8. ISENÇÃO DOS LOCAIS DE DIVULGAÇÃO</h4>
+            <ul>
+                <li>8.1. Os estabelecimentos onde os QR Codes estão fixados são apenas pontos de divulgação passiva, não tendo qualquer responsabilidade sobre a promoção, entrega de prêmios ou suporte técnico.</li>
+                <li>8.2. É proibida a participação de funcionários dos estabelecimentos parceiros. Cadastros identificados serão cancelados e a vaga repassada ao próximo participante.</li>
+            </ul>
+
+            <h4>9. DISPOSIÇÕES TÉCNICAS E GERAIS</h4>
+            <ul>
+                <li>9.1. Falhas Tecnológicas: O Estúdio não se responsabiliza por falhas na conexão de internet do participante, travamentos de dispositivos, falhas de bateria ou oscilações de rede que impeçam a conclusão do cadastro dentro do tempo limite ou o envio do formulário.</li>
+                <li>9.2. Apenas participantes que chegarem à tela de "Sucesso" e possuírem o registro validado junto ao estúdio terão direito ao prêmio.</li>
+                <li>9.3. O Estúdio reserva-se o direito de desclassificar qualquer participante que utilize meios robóticos, ilícitos ou que violem os termos de uso para obter vantagens na campanha.</li>
+                <li>9.4. Os casos omissos neste regulamento serão resolvidos pela administração do Sumar Estúdio.</li>
+                <li class="section-9-5">9.5. DA PRIVACIDADE E PROTEÇÃO DE DADOS</li>
+                <li>9.5.1. A participação na campanha não exige cadastro prévio, criação de conta ou fornecimento automático de dados pessoais para simples acesso à plataforma.</li>
+                <li>9.5.2. O sistema não realiza coleta automática de e-mails, telefones ou geração de banco de dados para fins de publicidade.</li>
+                <li>9.5.3. O contato com o Estúdio ocorre exclusivamente por iniciativa do participante, via WhatsApp, caso este deseje validar seu cupom premiado.</li>
+                <li>9.5.4. Os dados informados para fins de agendamento e validação do prêmio serão utilizados exclusivamente para a execução da campanha, não sendo compartilhados com terceiros nem utilizados para envio de comunicações promocionais futuras sem autorização expressa do participante.</li>
+                <li>9.5.5. O Estúdio preza pela confidencialidade, privacidade e segurança das informações eventualmente fornecidas.</li>
+            </ul>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="mt-5 pt-4 border-t border-white/10 text-center flex-shrink-0">
+            <div class="text-[11px] text-[#888] mb-4">
+                Sumar Estúdio - Recife/PE
+            </div>
+            <a href="https://www.instagram.com/tattosumar/" target="_blank" class="w-full h-12 bg-[#ff003c] text-white rounded-xl font-bold text-[14px] uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(255,0,60,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all no-underline">
+                <i data-lucide="instagram" class="w-[18px] h-[18px]"></i> @TATTOSUMAR
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts para Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Configuração dos ícones flutuantes
+        const stencils = [
+            { icon: 'skull', top: '15%', left: '10%', delay: '0s', size: 40 },
+            { icon: 'flower', top: '45%', left: '85%', delay: '2s', size: 30 },
+            { icon: 'zap', top: '75%', left: '15%', delay: '4s', size: 25 },
+            { icon: 'anchor', top: '25%', left: '70%', delay: '1s', size: 35 },
+            { icon: 'scissors', top: '85%', left: '60%', delay: '3s', size: 30 },
+        ];
+
+        const bgContainer = document.getElementById('stencils-bg');
+        
+        stencils.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'stencil';
+            div.style.top = item.top;
+            div.style.left = item.left;
+            div.style.animationDelay = item.delay;
+            div.innerHTML = `<i data-lucide="${item.icon}" style="width: ${item.size}px; height: ${item.size}px;"></i>`;
+            bgContainer.appendChild(div);
+        });
+
+        // Inicializa os ícones
+        lucide.createIcons();
+    </script>
+</body>
+</html>
